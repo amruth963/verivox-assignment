@@ -8,6 +8,7 @@ describe('User story A – DSL Tariffs > Scenario 1: Verify the DSL calculator',
     it('Verify the DSL calculator', function () {
         dLSCalculatorPage.navigateToDlsCalculatorPage();
         dLSCalculatorPage.verifyDlsCalculatorPage();
+        dLSCalculatorPage.acceptCookieSettingsBtn();
         dLSCalculatorPage.areaCodeTextField().click().type(Cypress.env("zipCode"));
         dLSCalculatorPage.speedSelect().should('contain', Cypress.env("internetSpeed")).click();
         dLSCalculatorPage.submitBtn().should('include.text', Cypress.env("submitBtnTxt")).click();

@@ -9,6 +9,7 @@ describe('User story A – DSL Tariffs > Scenario 2: Load multiple tariff result
     it('Load multiple tariff result pages', function () {
         dLSCalculatorPage.navigateToDlsCalculatorPage();
         dLSCalculatorPage.verifyDlsCalculatorPage();
+        // dLSCalculatorPage.acceptCookieSettingsBtn();
         dLSCalculatorPage.areaCodeTextField().click().type(Cypress.env("zipCode"));
         dLSCalculatorPage.speedSelect().should('contain', Cypress.env("internetSpeed")).click();
         dLSCalculatorPage.submitBtn().should('include.text', Cypress.env("submitBtnTxt")).click();
